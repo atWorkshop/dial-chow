@@ -1,0 +1,252 @@
+
+/* Style for header */
+h1#coc {
+	margin: 0;
+	padding: 0;
+	font-size: 30px;
+	text-align: center;
+}
+
+button#register, #login {
+	float: right;
+	position: relative;
+	margin-left: 5px;
+	margin-right: 20px;
+}
+
+button#register {
+	background: red;
+}
+
+button#login {
+	background: green;
+}
+
+button#register:hover, button#login:hover {
+	background: yellow;
+}
+
+button:hover {
+	background-color: green; 
+}
+
+/*CSS code for flexbox container */
+.flex-container{
+	display:flex;
+	flex-flow: wrap;
+	align-content:space-between;
+	width: 100%;
+	height: 555px;
+}
+
+/* CSS code to style flexbox 1 */
+#Flexbox1{
+	width:10%;
+	height:570px;
+	overflow: auto;
+	border:1px solid black;
+}
+
+h4#shop{
+	display: inline;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  	text-decoration:none;
+ 	font-size:16px;
+ 	color:black;
+ 	display: block;
+  	border:none;
+  	background:none;
+  	cursor:pointer;
+  	width:100%;
+}
+.dropdown-btn{
+	text-align: center;
+	background-color: black;
+	border: 1px solid white;
+	color: white;
+}
+
+/* CSS code to style flexbox 2 */
+#Flexbox2{
+	width:73%;
+	height:570px;
+	border: 1px solid black;
+	overflow: hidden;
+	align-items:center;
+
+}
+
+object {
+	width:100%;
+	height:570px;
+	/*overflow: hidden;*/
+}
+
+/* CSS code to style content for images and menu content display */
+.images {
+	width:208px;
+	height:155px;
+	align-content: : center;
+}
+
+.gallery{
+	float:left;
+	width:210px;
+	margin: 1px;
+	padding-left: 20px;
+	padding-bottom: 5px;
+	align-content:center;
+	border: 1px solid black;
+}
+
+.btn {
+	background-color: black;
+	color: white;
+}
+
+input[type=submit] {
+	/*border: 1px solid black;*/
+	width: 126px;
+	margin: 0.5px;
+}
+.btn:hover {
+	background-color: green;
+}
+
+input[type=button] {
+	width: auto;
+	display: inline-block;
+	background-color: red;
+}
+
+#beefDoc, #chickenDoc, #porkDoc {
+	display: block;
+}
+
+/* CSS code to style content inside flexbox 3*/
+#Flexbox3{
+	width:16%;
+	height:570px;
+	border: 1px solid black;
+}
+
+p {
+	margin: 0;
+	padding: 10px;
+	font-weight: bold;
+}
+
+/**********************************************************************/
+/*CSS to control login & register modals*/
+
+input[type = text], input[type = password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: left;
+    margin: 10px 0 10px 0;
+    position: relative;
+}
+
+.container {
+    padding: 10px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.modal {
+    display: none; 		 /*Hidden by default */
+    position:absolute; 	/* Stay in place */
+    z-index: 1; 		/* Sit on top */
+   /* left: 40px;*/
+    width: 80%; 		/* Full width */
+    height: auto; 		/* Full height */
+    background-color: #fefefe;
+  	cursor:pointer;
+  /*	border: 5px solid black;*/
+
+}
+.modalinfo {
+	display: none; 		 /*Hidden by default */
+    position:absolute; 	/* Stay in place */
+    z-index: 1; 		/* Sit on top */
+	height:auto%;
+	left:280px;
+	top:0;
+  	cursor:pointer;
+	text-align:center;
+}
+
+#registerModal {
+	height:80%;
+}
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    width: auto; /* Could be more or less, depending on screen size */
+  	border: 1px solid black;
+  	border-radius: 0px;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+.signupbtn{
+	background-color:green;
+	height:40px;
+	width:100px;
+	
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+ /*Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
