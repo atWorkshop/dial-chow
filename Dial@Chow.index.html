@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>	
+	<head>	
+		<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+		<meta name="viewport"content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="D@C CSS.css">
+		<title>Dial@Chow</title>	
+	</head>
+	<body>	
+		<header>	
+			<ul id="navBar">
+				<button id="login" onclick="document.getElementById('loginmodal').style.display='Block'">Login</button>
+				<button id="register" onclick="document.getElementById('registerModal').style.display='Block'">Register</button>
+				<h1 id="coc">Welcome to Dial@Chow</h1>
+			</ul>
+		</header>
+		<hr>
+		<div class="flex-container" id="full page">		
+			<!-- HTML defining elements for drop-down menu -->
+			<div id="Flexbox1">
+				<h4 id="shop">Shop by Category</h4>
+				<div class="sidenav">
+					<button id="beef-btn" class="dropdown-btn">Beef</button>
+						<div class="dropdown-container">
+							<a href="#">Bolognaise</a>
+							<a href="#">Beef Stroganoff</a>
+							<a href="#">Beef Cottage Pie</a>
+							<a href="#">Macaroni, Cheese & Mince</a>
+							<a href="#">Spagetti MeatBalls</a>
+							<a href="#">Beef Pie</a>
+							<a href="#">Beef Lasagne</a>
+							<a href="#">Bobotie</a>
+						</div>
+					<button id="chicken-btn" class="dropdown-btn">Chicken</button>
+						<div class="dropdown-container">
+							<a href="#">Chicken ala King</a>
+							<a href="#">Chicken Breyani</a>
+							<a href="#">Butter Chicken</a>
+							<a href="#">Chicken Lasagne</a>
+							<a href="#">LemonButter Chicken</a>
+							<a href="#">Chicken Pie</a>
+							<a href="#">Chicken Livers</a>
+							<a href="#">Mayonaise Chicken</a>
+						</div>
+					<button id="pork-btn" class="dropdown-btn">Pork</button>
+						<div class="dropdown-container">
+							<a href="#">Pork Shank</a>
+							<a href="#">Pork Ribs</a>
+							<a href="#">Sweet & Sour Pork</a>
+							<a href="#">Pork Vindaloo</a>
+							<a href="#">Pork Curry</a>
+							<a href="#">Pork Shnitzel</a>
+							<a href="#">Crispy Pork Belly</a>
+						</div>
+				</div>
+			</div>
+			<!-- HTML elements to display menu images etc-->
+			<div id ="Flexbox2">
+  				<section class="flex-container" id="menu-content">
+        			<object class="menu-item" id="beefDoc" type="text/html" data="beef.html"></object>  
+        			<object class="menu-item" id="chickenDoc" type="text/html" data="chicken.html"></object>
+        			<object class="menu-item" id="porkDoc" type="text/html" data="pork.html"></object>
+        		</section>
+			</div>
+			<!-- HTML elements to create the shopping cart -->
+			<div id="Flexbox3">
+				<div class="flex-container" id="kart">
+					<div id="content">
+						<h3 id="cart">Items in Shopping Cart:-</h3>
+							<form id="shopping-cart" method="post">
+								<table class="shopping-cart">
+									<thead>
+										<tr id="h2">
+											<th scope="col">Item</th>
+											<th scope="col">Qty</th>
+											<th scope="col">Price</th>
+											<th scope="col">Total</th>
+										</tr>
+									</thead>
+									<tbody id="h1">
+									</tbody>
+									<p id="sub-total">
+									<strong>Total</strong>:<span id="stotal"></span>
+									</p>
+									<br>
+								</table>
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="D@C JS.js"></script>
+		<!--script type="text/javascript" src="control cart.js"></script-->
+	</body>
+</html>
+
+	<div id="loginModal" class="modal">
+		<form class="modal-content" action="/action_page.php">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('loginModal').style.display = 'Block' " class="close" title="Close Modal">&times;</span>
+				<br>
+					<div class="container">
+						<h1>Login</h1>
+						<p>Please login to account.</p>
+						<hr>
+						<label for="uname"><b>Cell Number</b></label>
+							<input type="text" placeholder="Enter Cell Phone number" name="uname" required />
+						<label for="psw"><b>Password</b></label>
+							<input type="password" placeholder="Enter Password" name="psw" required />
+							<input type="checkbox" checked="checked" name="remember" /> Remember me
+
+						<p>By logging into your account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+						<div class="clearfix">
+							<button type="submit" class="signupbtn">Login</button>
+							<button type="button" onclick="document.getElementById('loginModal').style.display = 'none' " class="cancelbtn">Cancel</button>
+							<span class="psw">Forgot <a href="#">password?</a></span>
+						</div>
+					</div>
+			</div>
+		</form>
+	</div>
+	
+	<div id="registerModal" class="modal">
+		<form class="modal-content" action="/action_page.php">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('registerModal').style.display = 'Block' " class="close" title="Close Modal">&times;</span>
+					<div class="container">
+						<h1>Registration Form</h1>
+						<p>Please fill in this form to create an account.</p>
+						<hr>
+						<label for="email"><b>Cell Number</b></label>
+							<input type="text" placeholder="Enter Cellphone Number " name="email" required />
+						<label for="psw"><b>Password</b></label>
+							<input type="password" placeholder="Enter Password" name="psw" required />
+						<label for="psw-repeat"><b>Repeat Password</b></label>
+							<input type="password" placeholder="Repeat Password" name="psw-repeat" required />
+							<input type="checkbox" checked="checked" name="remember" /> Remember me
+
+						<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+						<div class="clearfix">
+							<button type="submit" class="signupbtn">Sign Up</button>
+							<button type="button" onclick="document.getElementById('registerModal').style.display = 'none' " class="cancelbtn">Cancel</button>
+						</div>
+					</div>
+			</div>
+		</form>
+	</div>
+
